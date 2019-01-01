@@ -9,22 +9,8 @@ const styles = StyleSheet.create({
 })
 
 class MyChores extends React.Component{
-    constructor(props){
-        super(props);
-        this.state={
-            chores: []
-        }
-    }
-    componentDidMount(){
-        axios.get('https://neighboring.today/api/chore').then(res => {
-            this.setState({
-                chores: res.data
-            })
-        })
-    }
 
     render(){
-        console.log(this.state)
         return(
             <View style={styles.container} >
                 <Text>View</Text>
