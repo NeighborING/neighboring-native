@@ -6,9 +6,6 @@ class header extends Component {
         super(props)
     }
     render() {
-
-        console.log(this.props)
-
         return (
             <Header>
                 <Left>
@@ -17,7 +14,7 @@ class header extends Component {
                     </Button>
                 </Left>
                 <Body>
-                    <Title>Header</Title>
+                    <Title>{this.props.navigation.state.routeName}</Title>
                 </Body>
                 <Right />
             </Header>

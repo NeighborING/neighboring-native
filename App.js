@@ -9,9 +9,9 @@ import {createStore, applyMiddleware} from 'redux';
 import rootReducer from './src/reducers';
 import promise from './src/middleware/promise';
 
-import HomeScreen from './screens/homeScreen'
-import MyChoresScreen from './screens/myChoresScreen'
-
+import HomeScreen from './screens/homeScreen';
+import MyChoresScreen from './screens/myChoresScreen';
+import OpenChoreScreen from './screens/openChoresScreen';
 
 
 
@@ -34,9 +34,11 @@ const sidebar = props => (
 
 const AppDrawerNavigator =  createAppContainer(createDrawerNavigator({
 	Home: HomeScreen,
-	MyChores: MyChoresScreen
+	MyChores: MyChoresScreen,
+	OpenChores: OpenChoreScreen,
 }, {
-	contentComponent: sidebar
+	contentComponent: sidebar,
+
 }))
 
 
