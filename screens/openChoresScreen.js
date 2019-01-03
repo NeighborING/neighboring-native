@@ -1,11 +1,15 @@
 import React from 'react';
-import { View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Container, Content, Card, CardItem, Body, Text } from 'native-base'
 import Header from '../src/components/header'
 import axios from 'axios';
 
-class OpenChores extends React.Component{
 
+const styles = StyleSheet.create({
+
+})
+
+class OpenChores extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -35,6 +39,7 @@ class OpenChores extends React.Component{
                     </CardItem>
                     <CardItem>
                         <Body>
+                            <Text>Neighbor: {item.posterFname} {item.posterLname}</Text>
                             <Text>{item.description}</Text>
                         </Body>
                     </CardItem>
